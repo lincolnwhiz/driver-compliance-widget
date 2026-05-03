@@ -194,6 +194,12 @@ ZOHO.embeddedApp.on("PageLoad", function(data){
 });
 
 ZOHO.embeddedApp.init();
+
+setTimeout(function(){
+    if(rows.length === 0 && document.getElementById('loader').style.display !== 'none'){
+        tryLoad();
+    }
+}, 3000);
 </script>
 </body>
 </html>
